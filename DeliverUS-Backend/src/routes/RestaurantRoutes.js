@@ -29,6 +29,7 @@ const loadFileRoutes = function (app) {
     // TODO: Add needed middlewares
       isLoggedIn,
       hasRole('owner'),
+      handleFilesUpload(['image'], process.env.RESTAURANTS_FOLDER),
       RestaurantValidation.update,
       handleValidation,
       checkRestaurantOwnership,
