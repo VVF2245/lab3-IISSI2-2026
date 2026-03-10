@@ -47,7 +47,7 @@ const update = [
   check('address').exists().isString().isLength({ min: 1, max: 255 }).trim(),
   check('postalCode').exists().isString().isLength({ min: 1, max: 255 }).trim(),
   check('url').optional({ nullable: true, checkFalsy: true }).isString().isURL().trim(),
-  check('email').optional({ nullable: true, checkfalsy: true }).isString().isEmail().trim(),
+  check('email').optional({ nullable: true, checkFalsy: true }).isString().isEmail().trim(),
   check('phone').optional({ nullable: true, checkFalsy: true }).isString().isLength({ min: 1, max: 255 }).trim(),
   check('restaurantCategoryId').exists({ checkNull: true }).isInt({ min: 1 }).toInt(),
   check('userId').not().exists()
